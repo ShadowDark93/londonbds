@@ -11,6 +11,9 @@ import { PortafolioComponent } from './components/portafolio/portafolio.componen
 import { WhyUsComponent } from './components/why-us/why-us.component';
 import { TiendasComponent } from './components/tiendas/tiendas.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { IndexComponent } from './components/products/index/index.component';
+import { DiscountComponent } from './components/discount/discount.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     PortafolioComponent,
     WhyUsComponent,
     TiendasComponent,
-    ContactoComponent
+    ContactoComponent,
+    IndexComponent,
+    DiscountComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,152 @@
+#why-us h3{
+color: #fff;
+font-family: 'Times New Roman', Times, serif;
+font-size:50px;
+
+}
+
+#why-us h5{
+  font-family: 'Times New Roman', Times, serif;
+  font-size:20px;
+
+  }
+
+#why-us .container .card p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+#why-us .container .section-header p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  text-align: justify;
+  color: #fff;
+}
+#why-us .container .t{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  color: rgb(45,42,147);
+}
+
+#why-us .container .n{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  color: #fff;
+}
+
+#why-us .section-header{
+  margin-top: 0px;
+  margin-bottom:0px;
+  padding-bottom: 0px;
+}
+
+#services {
+  padding: 60px 0 40px 0;
+  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+#services .box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 10px 40px 10px;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+#services .box:hover {
+  transform: translateY(-5px);
+}
+#services .icon {
+  position: absolute;
+  left: -15px;
+  top: calc(50% - 32px);
+}
+#services .icon i {
+  font-size: 64px;
+  line-height: 0;
+  transition: 0.5s;
+}
+#services .title {
+  margin-left: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+#services .title a {
+  color: #111;
+}
+#services .box:hover .title a {
+  color: rgb(45,42,147);
+}
+#services .description {
+  font-size: 14px;
+  margin-left: 40px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+#why-us {
+
+  background: url("../../../assets/img/Retablo 5.jpg") no-repeat center center/cover;
+
+}
+/*#why-us .section-header h3, #why-us .section-header p {
+
+}*/
+
+#why-us .card {
+  background: rgb(45,42,147);
+  border-color: rgb(45,42,147);
+  border-radius: 10px;
+  margin: 0 15px;
+  padding: 15px 0;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  height: 100%;
+}
+@media (max-width: 991px) {
+  #why-us .card {
+    margin: 0;
+  }
+}
+#why-us .card:hover {
+  background: rgb(45,42,100);
+  border-color: rgb(45,42,100);
+}
+#why-us .card i {
+  font-size: 48px;
+  padding-top: 15px;
+  color: #bfddfe;
+}
+#why-us .card h5 {
+  font-size: 22px;
+  font-weight: 600;
+}
+#why-us .card p {
+  font-size: 15px;
+  color: #d8eafe;
+}
+#why-us .card .readmore {
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+  border-bottom: rgb(45,42,100) solid 2px;
+}
+#why-us .card .readmore:hover {
+  border-bottom: #fff solid 2px;
+}
+#why-us .counters {
+  padding-top: 40px;
+}
+#why-us .counters span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  display: block;
+  color: #fff;
+}

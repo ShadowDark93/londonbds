@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Section;
-use App\Http\Requests\StoreSectionRequest;
-use App\Http\Requests\UpdateSectionRequest;
+use Illuminate\Http\Request;
 
+/**
+ * Class SectionController
+ * @package App\Http\Controllers
+ */
 class SectionController extends Controller
 {
     /**
@@ -16,72 +19,79 @@ class SectionController extends Controller
     public function index()
     {
         $sections = Section::all();
-        return json_encode($sections);
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return $sections;
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreSectionRequest  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSectionRequest $request)
+    public function store(Request $request)
     {
-        //
+        request()->validate(Section::$rules);
+
+        $section = Section::create($request->all());
+
+        return redirect()->route('sections.index')
+            ->with('success', 'Section created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Section  $section
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Section $section)
+    public function show($id)
     {
-        //
+        $section = Section::find($id);
+
+        return view('section.show', compact('section'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Section  $section
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Section $section)
+    public function edit($id)
     {
-        //
+        $section = Section::find($id);
+
+        return view('section.edit', compact('section'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateSectionRequest  $request
-     * @param  \App\Models\Section  $section
+     * @param  \Illuminate\Http\Request $request
+     * @param  Section $section
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSectionRequest $request, Section $section)
+    public function update(Request $request, Section $section)
     {
-        //
+        request()->validate(Section::$rules);
+
+        $section->update($request->all());
+
+        return redirect()->route('sections.index')
+            ->with('success', 'Section updated successfully');
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Section  $section
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
-    public function destroy(Section $section)
+    public function destroy($id)
     {
-        //
+        $section = Section::find($id)->delete();
+
+        return redirect()->route('sections.index')
+            ->with('success', 'Section deleted successfully');
     }
 }

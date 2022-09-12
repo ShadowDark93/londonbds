@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
+use App\Models\SocialNetwork;
 use App\Models\User;
-use App\Models\socialNetwork;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class SocialNetworkPolicy
@@ -25,10 +25,10 @@ class SocialNetworkPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\socialNetwork  $socialNetwork
+     * @param  \App\Models\SocialNetwork  $socialNetwork
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, socialNetwork $socialNetwork)
+    public function view(User $user, SocialNetwork $socialNetwork)
     {
         //
     }
@@ -48,10 +48,10 @@ class SocialNetworkPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\socialNetwork  $socialNetwork
+     * @param  \App\Models\SocialNetwork  $socialNetwork
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, socialNetwork $socialNetwork)
+    public function update(User $user, SocialNetwork $socialNetwork)
     {
         //
     }
@@ -60,10 +60,10 @@ class SocialNetworkPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\socialNetwork  $socialNetwork
+     * @param  \App\Models\SocialNetwork  $socialNetwork
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, socialNetwork $socialNetwork)
+    public function delete(User $user, SocialNetwork $socialNetwork)
     {
         //
     }
@@ -72,10 +72,10 @@ class SocialNetworkPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\socialNetwork  $socialNetwork
+     * @param  \App\Models\SocialNetwork  $socialNetwork
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, socialNetwork $socialNetwork)
+    public function restore(User $user, SocialNetwork $socialNetwork)
     {
         //
     }
@@ -84,10 +84,10 @@ class SocialNetworkPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\socialNetwork  $socialNetwork
+     * @param  \App\Models\SocialNetwork  $socialNetwork
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, socialNetwork $socialNetwork)
+    public function forceDelete(User $user, SocialNetwork $socialNetwork)
     {
         //
     }

@@ -1,0 +1,73 @@
+{
+  "navbar": {
+    "inicio": "Inicio",
+    "nosotros": "Nosotros",
+    "portafolio": "Portafolio",
+    "tiendas": "Nuestras tiendas",
+    "contacto": "Contacto"
+  },
+  "eslogan": {
+    "text1": "Hechos con",
+    "text2":"amor y calidad",
+    "text3":"para tu bienestar!",
+    "text4":"Conozcanos",
+    "text5":"Promociones"
+  },
+  "nosotros": {
+    "tittle": "NOSOTROS",
+    "text1": "Colchones LONDON BEDS representa la manera artística y tradicional con enfoque personalizado digno de la mejor sastrería en el arte de hacer colchones.",
+    "text2": "Nuestras camas combinan y aplican procesos técnicos que cubrió la revolución industrial por el año de 1966 en sintonía con los ritmos acelerados de la vida moderna, al tiempo que reflejan la herencia y la historia clásica europea en el arte del descanso.",
+    "el1": "Calidad",
+    "el2": "Comodidad",
+    "el3": "Confort"
+  },
+  "descanso": {
+    "tittle": "UN MEJOR DESCANSO",
+    "text1": "Cada colchón se cose a mano para una resistencia duradera. Terminado con telas exquisitas y bordado con el nombre de Colchones LONDON BEDS como testimonio de obra maestra y placer excepcional.",
+    "text2": "Nos gustan los retos y nuestro anhelo es que su cama se convierta en una parte integral de su vida, brindándole años de sueño reparador y placer, situando a Colchones LONDON BEDS en una posición de prestigio en búsqueda insaciable de nuevas ideas y técnicas de confort."
+  },
+  "whyus": {
+    "tittle": "¿Porqué nosotros?",
+    "text1": "En cada cama LONDON BEDS se utilizan los mejores materiales y con sistemas de amortiguadores pocket ensacados o biconicos continuos en forma de panal. Las fibras te mantienen a ti y a tu cama frescos, secos y limpios.",
+    "cards": {
+      "card1": {
+        "tittle": "Calidad",
+        "text1": "Las camas LONDON BEDS utilizan los mejores materiales, con sistemas de amortiguadores pocket ensacados o biconicos continuos en forma de panal. Las fibras te mantienen a ti y a tu cama frescos, secos y limpios."
+      },
+      "card2": {
+        "tittle": "Comodidad",
+        "text1": "Cada resorte se mueve de forma inteligente en respuesta a su cuerpo y sus movimientos, ofreciendo un soporte personalizado y una comodidad suprema para que puedas disfrutar de un mejor descanso."
+      },
+      "card3": {
+        "tittle": "Confort",
+        "text1": "El resultado final es una cama profundamente cómoda que cuenta con la mejor tecnologia, calidad, resistencia, diseño y textura que proporciona a nuestros clientes un sueño reparador muy merecido."
+      },
+      "card4": {
+        "tittle": "Clientes"
+      },
+      "card5": {
+        "tittle": "Años de servicio"
+      },
+      "card6": {
+        "tittle": "Unidades vendidas"
+      },
+      "card7": {
+        "tittle": "Colaboradores"
+      }
+    }
+  },
+  "tiendas": {
+    "tittle": "Nuestras Tiendas",
+    "text1": "Encuentranos en las diferentes sedes que tenemos en la ciudad de Ibagué.",
+    "phone":"Teléfono:",
+    "address":"Dirección:"
+  },
+  "ubicacion": {
+    "tittle": "Ubicación"
+  },
+  "contacto": {
+    "tittle": "Contáctanos",
+    "telefono": "Teléfono",
+    "email": "Correo"
+  }
+}

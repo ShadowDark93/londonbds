@@ -1,0 +1,73 @@
+{
+  "navbar": {
+    "inicio": "Index",
+    "nosotros": "Us",
+    "portafolio": "Portfolio",
+    "tiendas": "Our shops",
+    "contacto": "Contact us"
+  },
+  "eslogan": {
+    "text1": "Made with",
+    "text2": "love and quality",
+    "text3": "for your well-being!",
+    "text4": "Know us",
+    "text5": "Furtherance"
+  },
+  "nosotros": {
+    "tittle": "US",
+    "text1": "LONDON BEDS mattresses represent the artistic and traditional way with personalized approach worthy of the best tailoring in the art of making mattresses.",
+    "text2": "Our beds combine and apply covered technical processes in the industrial revolution of 1966 in tune with the fast paces of modern life, while reflecting classical European heritage and history in the art of rest.",
+    "el1": "Quality",
+    "el2": "Amenity",
+    "el3": "Confort"
+  },
+  "descanso": {
+    "tittle": "A BETTER REST",
+    "text1": "Each mattress is sewn by hand for long-lasting strength. Finished with exquisite fabrics and embroidered with the name of LONDON BEDS Mattresses as a testimony of masterpiece and exceptional pleasure.",
+    "text2": "We like challenges and our desire is that your bed becomes an integral part of your life, giving you years of restful sleep and pleasure, placing LONDON BEDS Mattresses in a prestigious position in search of new ideas and comfort techniques."
+  },
+  "whyus": {
+    "tittle": "WHY US?",
+    "text1": "In each bed of LONDON BEDS the best materials are used and with systemss  of  bagged pocket shock absorbers or  continuous  biconics  in the form of a honeycomb. Fibers keep you and your bed cool, dry, and clean.",
+    "cards": {
+      "card1": {
+        "tittle": "Quality",
+        "text1": "LONDON BEDS beds use the best materials, with continuous biconical or pocket pocket damper systems in panel form. The fibers keep you and your bed cool, dry and clean."
+      },
+      "card2": {
+        "tittle": "Amenity",
+        "text1": "Each spring moves intelligently in response to your body and your movements, offering personalized support and supreme comfort so you can enjoy a better night's sleep."
+      },
+      "card3": {
+        "tittle": "Confort",
+        "text1": "The final result is a deeply comfortable bed that has the best technology, quality, resistance, design and texture that provides our clients with a well-deserved restful sleep."
+      },
+      "card4": {
+        "tittle": "Clients"
+      },
+      "card5": {
+        "tittle": "Years of service"
+      },
+      "card6": {
+        "tittle": "Sold Units"
+      },
+      "card7": {
+        "tittle": "Collaborators"
+      }
+    }
+  },
+  "tiendas": {
+    "tittle": "Our shops",
+    "text1": "Find us at the different locations we have in the Ibagué city.",
+    "phone": "Phone:",
+    "address": "Address:"
+  },
+  "ubicacion": {
+    "tittle": "Location"
+  },
+  "contacto": {
+    "tittle": "Contact us",
+    "telefono": "Phone",
+    "email": "Email"
+  }
+}

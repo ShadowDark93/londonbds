@@ -34,7 +34,7 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
@@ -189,7 +189,7 @@
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate portfolio lightbox
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
@@ -243,3 +243,22 @@
   });
 
 })()
+
+
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 100) {
+    document.querySelector('.go-top-container')
+      .classList.add('show');
+  } else {
+    document.querySelector('.go-top-container')
+      .classList.remove('show');
+  }
+}
+
+document.querySelector('.go-top-container')
+  .addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });

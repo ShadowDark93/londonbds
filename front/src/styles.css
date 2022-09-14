@@ -9,65 +9,82 @@
   font-size: 15px;
 }
 
-.go-top-container{
-position:fixed;
-bottom: 4rem;
-right: 4rem;
-width: 6.6rem;
-height: 6.6rem;
-z-index: -1;
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: rgb(45,42,147);
 }
 
-.go-top-button {
-width: 0rem;
-height: 0rem;
-background: rgb(45,42,147);
-border-radius: 50%;
-cursor: pointer;
-transition: .5s;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: -1;
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid rgb(45,42,147);
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
 }
 
-.go-top-button i{
-  position: absolute;
-  font-size: 1.7rem;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  color: white;
-  transition: .2s;
-}
-
-.show{
-  z-index: 10;
-}
-
-.show .go-top-button {
-  animation: popup .3s ease-in-out;
-  width: 6.6rem;
-  height: 6.6rem;
-  z-index: 11;
-}
-
-.show i{
-  transform: translate(-50%, -50%) scale(1);
-}
-
-@keyframes popup {
-  0%{
-    width: 0rem;
-    height: 0rem;
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
   }
-  50%{
-    width: 8rem;
-    height: 8rem;
+
+  100% {
+    transform: rotate(360deg);
   }
-  100%{
-    width: 6.6rem;
-    height: 6.6rem;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
   }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: rgb(45,42,147);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: rgb(45,42,147);
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
 }
 

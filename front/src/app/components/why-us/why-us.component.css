@@ -26,14 +26,31 @@ font-size:50px;
 }
 #why-us .container .t{
   font-family: 'Times New Roman', Times, serif;
-  font-size: 25px;
-  color: rgb(45,42,147);
+  font-size: 20px;
+  color: #fff;
 }
 
 #why-us .container .n{
   font-family: 'Times New Roman', Times, serif;
-  font-size: 40px;
+  font-size: 30px;
   color: #fff;
+}
+
+#why-us .container .c{
+  background: rgb(45,42,147);
+  border-color: rgb(45,42,147);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 5px 0;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  opacity:70%;
+}
+
+#why-us .container .c:hover {
+  background: rgb(45,42,100);
+  border-color: rgb(45,42,100);
 }
 
 #why-us .section-header{
@@ -42,6 +59,11 @@ font-size:50px;
   padding-bottom: 0px;
 }
 
+#why-us .section-header .c{
+  margin-top: 20px;
+  padding-top: 40px;
+  opacity:70%;
+}
 #services {
   padding: 60px 0 40px 0;
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
@@ -106,6 +128,7 @@ font-size:50px;
   color: #fff;
   transition: 0.3s ease-in-out;
   height: 100%;
+  opacity:70%;
 }
 @media (max-width: 991px) {
   #why-us .card {

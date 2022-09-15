@@ -69,5 +69,14 @@
     "tittle": "Contact us",
     "telefono": "Phone",
     "email": "Email"
+  },
+  "portafolio": {
+    "tittle":"Our portafolio",
+    "text1":"All",
+    "colchones": "Mattress",
+    "sofa": "Sofa bed",
+    "sillas": "Reclaining chair York",
+    "base": "Bed base",
+    "cabecero": "Headboard"
   }
 }

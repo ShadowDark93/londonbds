@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use App\Models\ProductImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -20,9 +19,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = DB::table('product_images')->join('products', 'products.id', '=', 'product_images.product_id')->where('products.status','=','1')->get();
+        $products = DB::table('product_images')->join('products', 'products.id', '=', 'product_images.product_id')->where('products.status', '=', '1')->get();
 
         return $products;
+
     }
 
     /**
@@ -60,9 +60,14 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = Product::find($id);
 
-        return view('product.show', compact('product'));
+        $query = Product::find($id);
+        if (isset($query)) {
+            $products = Product::join('product_images', 'products.id', '=', 'product_images.product_id')->where('products.status', '=', '1')->where('products.id', $id)->get();
+            return response()->json(array('data' => $products[0], 'status' => '200'));
+        }else{
+            return response()->json(array('data' =>"Producto no encontrado","status" => "404"));
+        }
     }
 
     /**

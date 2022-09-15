@@ -69,5 +69,14 @@
     "tittle": "Contáctanos",
     "telefono": "Teléfono",
     "email": "Correo"
+  },
+  "portafolio":{
+    "tittle":"Nuestro Portafolio",
+    "text1": "Todos",
+    "colchones":"Colchones",
+    "sofa":"Sofa cama",
+    "sillas":"Sillas reclinable York",
+    "base":"Base Cama",
+    "cabecero":"Cabecero"
   }
 }

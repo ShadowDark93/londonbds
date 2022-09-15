@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/colchon7/repositories/londonbeds/back/
+    -/bin/cp * $DEPLOYPATH

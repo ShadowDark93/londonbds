@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/colchon7/back/
-    -/bin/cp * $DEPLOYPATH
+    -/bin/cp -r /back/* $DEPLOYPATH

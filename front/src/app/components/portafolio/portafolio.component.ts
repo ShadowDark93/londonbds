@@ -9,7 +9,7 @@ import { PortafolioService } from 'src/app/services/portafolio.service';
 })
 export class PortafolioComponent implements OnInit {
 
-  productos: Products[] = [];
+  products: Products[] = [];
 
   constructor(private portfolio: PortafolioService) { }
 
@@ -17,14 +17,12 @@ export class PortafolioComponent implements OnInit {
     this.getAllProducts();
   }
 
-  async getAllProducts() {
-    await this.portfolio.getAllProducts().subscribe(res => {
-      console.log(res);
-      /* res.forEach(producto=> {
-        this.productos.push(producto);
-      }) */
+  getAllProducts() {
+    this.portfolio.getAllProduction().subscribe(res => {
+      res.forEach(el => {
+        this.products.push(el);
+      });
     });
-
   }
 
 }

@@ -18,6 +18,7 @@ import { TiendasComponent } from './components/tiendas/tiendas.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { IndexComponent } from './components/products/index/index.component';
 import { DiscountComponent } from './components/discount/discount.component';
+import { DetailComponent } from './components/portafolio/detail/detail.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { DiscountComponent } from './components/discount/discount.component';
     ContactoComponent,
     IndexComponent,
     DiscountComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

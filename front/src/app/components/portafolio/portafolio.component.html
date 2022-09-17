@@ -10,29 +10,26 @@
       <div class="col-lg-12">
         <ul id="portfolio-flters">
           <li data-filter="*" class="filter-active">{{ "portafolio.text1" | translate }}</li>
-          <li data-filter=".filter-colchones">{{ "portafolio.colchones" | translate }}</li>
+          <!-- <li data-filter=".filter-colchones">{{ "portafolio.colchones" | translate }}</li>
           <li data-filter=".filter-sofa">{{ "portafolio.sofa" | translate }}</li>
           <li data-filter=".filter-sillas">{{ "portafolio.sillas" | translate }}</li>
           <li data-filter=".filter-base">{{ "portafolio.base" | translate }}</li>
-          <li data-filter=".filter-cabecero">{{ "portafolio.cabecero" | translate }}</li>
+          <li data-filter=".filter-cabecero">{{ "portafolio.cabecero" | translate }}</li> -->
         </ul>
       </div>
     </div>
 
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+      <div *ngFor="let product of products" class="col-lg-4 col-md-6 portfolio-item filter-colchones">
         <div class="portfolio-wrap">
-          <img src="assets/img/portfolio/app1.jpg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4><a href="portfolio-details.html">App 1</a></h4>
-            <p>App</p>
-            <div>
-              <a href="assets/img/portfolio/app1.jpg" data-gallery="portfolioGallery" title="App 1"
-                class="portfolio-lightbox link-preview"><i class="bi bi-plus"></i></a>
-              <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
-            </div>
-          </div>
+          <img [src]="product.image" class="img-fluid" alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4 class="text-center">
+            <p>{{ product.name }}</p>
+            <a routerLink="/products/" {{ product.id }}></a>
+          </h4>
         </div>
       </div>
 

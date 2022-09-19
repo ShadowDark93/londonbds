@@ -12,16 +12,12 @@ export class PortafolioService {
 
   constructor(private http: HttpClient) { }
 
-  getAllProducts() {
-    return this.http.get<Products[]>(this.url);
-  }
-
   getAllProduction() {
     return this.http.get<Products[]>("https://api.colchoneslondonbeds.com/api/products");
   }
 
   getProductById(id: number): Observable<Products> {
-    return this.http.get<Products>(this.url + id);
+    return this.http.get<Products>("https://api.colchoneslondonbeds.com/api/products/" + id);
   }
 
 }

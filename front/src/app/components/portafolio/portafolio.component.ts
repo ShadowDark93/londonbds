@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Products } from 'src/app/models/products';
 import { PortafolioService } from 'src/app/services/portafolio.service';
 
@@ -11,7 +12,11 @@ export class PortafolioComponent implements OnInit {
 
   products: Products[] = [];
 
-  constructor(private portfolio: PortafolioService) { }
+  languaje: string='';
+
+  constructor(
+    private portfolio: PortafolioService
+  ) { }
 
   ngOnInit(): void {
     this.getAllProducts();
@@ -23,6 +28,10 @@ export class PortafolioComponent implements OnInit {
         this.products.push(el);
       });
     });
+  }
+
+  redirectToDetail(id: any) {
+    alert('Please select a product')
   }
 
 }

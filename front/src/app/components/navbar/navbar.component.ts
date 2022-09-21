@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -8,6 +9,12 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent implements OnInit {
 
+  isMenuOpenned: boolean = false;
+
+  dropdownOpenned: boolean = false;
+
+  closeNavbar: boolean = false;
+
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'es']);
     translate.setDefaultLang('en');
@@ -17,8 +24,24 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  switchLang = (lang: string) => {
-    this.translate.use(lang)
+  switchEs() {
+    this.translate.use('es');
+    this.menuMobile();
+  }
+
+  switchEn() {
+    this.translate.use('en');
+    this.menuMobile();
+  }
+
+  menuMobile() {
+
+      this.isMenuOpenned = !this.isMenuOpenned;
+
+  }
+
+  dropdown() {
+    this.dropdownOpenned = !this.dropdownOpenned;
   }
 
 }

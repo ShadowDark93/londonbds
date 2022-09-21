@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { PortafolioService } from 'src/app/services/portafolio.service';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public translate: TranslateService,
+    private portfolio: PortafolioService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  getDataFromBack(id:any) {
+    this.portfolio.getProductById(id).subscribe(res => {
+      console.log(res);
+    });
   }
 
 }

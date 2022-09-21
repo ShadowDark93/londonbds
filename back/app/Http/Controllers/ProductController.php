@@ -19,7 +19,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = DB::table('product_images')->join('products', 'products.id', '=', 'product_images.product_id')->where('products.status', '=', '1')->get();
+        $products = DB::table('products')
+            ->join('product_images', 'products.id', '=', 'product_images.product_id')
+            ->where('products.status', '=', '1')
+            ->orderBy('products.id')
+            ->groupBy('products.name')
+            ->get();
 
         return $products;
 
@@ -65,8 +70,8 @@ class ProductController extends Controller
         if (isset($query)) {
             $products = Product::join('product_images', 'products.id', '=', 'product_images.product_id')->where('products.status', '=', '1')->where('products.id', $id)->get();
             return response()->json(array('data' => $products[0], 'status' => '200'));
-        }else{
-            return response()->json(array('data' =>"Producto no encontrado","status" => "404"));
+        } else {
+            return response()->json(array('data' => "Producto no encontrado", "status" => "404"));
         }
     }
 

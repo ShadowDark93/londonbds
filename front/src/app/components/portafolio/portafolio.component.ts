@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Products } from 'src/app/models/products';
 import { PortafolioService } from 'src/app/services/portafolio.service';
+import { DetailComponent } from './detail/detail.component';
 
 @Component({
   selector: 'app-portafolio',
@@ -30,8 +31,8 @@ export class PortafolioComponent implements OnInit {
     });
   }
 
-  redirectToDetail(id: any) {
-    alert('Please select a product')
+  getProductById(id: any) {
+
   }
 
 }

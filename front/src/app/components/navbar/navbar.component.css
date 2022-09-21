@@ -194,3 +194,8 @@ a{
   display: block;
 }
 
+.navbar .nav-link img{
+margin: 5px;
+max-width: 25px;
+align-items: center;
+}

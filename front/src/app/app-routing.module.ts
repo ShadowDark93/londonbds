@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '', component: PrincipalComponent,
   },
   {
-    path: 'products/:id', component: DetailComponent
+    path: ':id', component: DetailComponent
   },
   {
     path: '', redirectTo: '', pathMatch: 'full'

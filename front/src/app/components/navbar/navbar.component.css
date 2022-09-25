@@ -49,7 +49,7 @@ a{
   transition: 0.5s;
 }
 .mobile-nav-toggle.bi-x {
-  color: #fff;
+  color: rgba(99, 94, 94, 0.527);
 }
 
 @media (max-width: 991px) {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Products } from 'src/app/models/products';
 import { PortafolioService } from 'src/app/services/portafolio.service';
@@ -16,7 +17,9 @@ export class PortafolioComponent implements OnInit {
   languaje: string='';
 
   constructor(
-    private portfolio: PortafolioService
+    private portfolio: PortafolioService,
+    /* private detail: DetailComponent, */
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -31,8 +34,8 @@ export class PortafolioComponent implements OnInit {
     });
   }
 
-  getProductById(id: any) {
-
+  redirectToDetail(id: any) {
+    this.router.navigate([id]);
   }
 
 }

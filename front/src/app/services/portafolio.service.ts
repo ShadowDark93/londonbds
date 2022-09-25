@@ -8,16 +8,14 @@ import { Observable } from 'rxjs';
 })
 export class PortafolioService {
 
-  url = "api/products/";
-
   constructor(private http: HttpClient) { }
 
   getAllProduction() {
     return this.http.get<Products[]>("https://api.colchoneslondonbeds.com/api/products");
   }
 
-  getProductById(id: number): Observable<Products> {
-    return this.http.get<Products>("https://api.colchoneslondonbeds.com/api/products/" + id);
+  getProductById(id: any) {
+    return this.http.get<Products[]>("https://api.colchoneslondonbeds.com/api/products/"+id);
   }
 
 }

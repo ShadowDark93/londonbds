@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { ActivatedRoute } from '@angular/router';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { Products } from 'src/app/models/products';
 import { PortafolioService } from 'src/app/services/portafolio.service';
 
 @Component({
@@ -9,18 +11,45 @@ import { PortafolioService } from 'src/app/services/portafolio.service';
 })
 export class DetailComponent implements OnInit {
 
+  private id: any;
+
+  products: Products[] = [];
+
+  text: any;
+
   constructor(
     public translate: TranslateService,
-    private portfolio: PortafolioService
-  ) { }
-
-  ngOnInit(): void {
+    private portfolio: PortafolioService,
+    private activeRoute: ActivatedRoute
+  ) {
   }
 
-  getDataFromBack(id:any) {
+  ngOnInit(): void {
+    this.id = this.activeRoute.snapshot.paramMap.get('id');
+    this.getDataFromBack(this.id);
+    this.currentLang();
+
+  }
+
+  getDataFromBack(id: any) {
     this.portfolio.getProductById(id).subscribe(res => {
-      console.log(res);
+      res.forEach(el => {
+        this.products.push(el);
+      });
+      this.text = this.products[0].description_es;
     });
+  }
+
+  currentLang() {
+    this.translate.onLangChange
+      .subscribe((event: LangChangeEvent) => {
+        console.log('onLangChange', event);
+        if (event.lang == 'es') {
+          this.text = this.products[0].description_es;
+        } else {
+          this.text = this.products[0].description_en;
+        }
+      });
   }
 
 }

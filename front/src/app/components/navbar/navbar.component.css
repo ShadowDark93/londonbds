@@ -1,8 +1,8 @@
-a{
+a {
   font-size: 23px;
 }
 
-#header{
+#header {
   background-color: #fff;
 }
 .navbar ul {
@@ -15,27 +15,27 @@ a{
 .navbar ul li {
   padding: 10px;
 }
-.navbar ul li a{
+.navbar ul li a {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  font-family: 'Times New Roman', Times, serif;
-  color: rgb(45,42,147);
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(45, 42, 147);
   font-weight: 500;
   white-space: nowrap;
   transition: 0.3s;
 }
-.navbar ul li a:hover{
-  border-bottom: 3px solid rgb(45,42,147);
+.navbar ul li a:hover {
+  border-bottom: 3px solid rgb(45, 42, 147);
 }
-.navbar .nav-link img{
+.navbar .nav-link img {
   margin: 5px;
   max-width: 25px;
   align-items: center;
   cursor: pointer;
   transition: 0.5s;
-  }
+}
 
 @media (max-width: 1366px) {
 }
@@ -73,7 +73,6 @@ a{
   z-index: 999;
 }
 
-
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
   top: 15px;
@@ -91,18 +90,19 @@ a{
   overflow-y: auto;
   transition: 0.3s;
 }
-.navbar-mobile a, .navbar-mobile a:focus {
+.navbar-mobile a,
+.navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: rgb(45,42,147);
+  color: rgb(45, 42, 147);
 }
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: rgb(45,42,147);
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover > a {
+  color: rgb(45, 42, 147);
 }
 
 #header .logo img {
   margin-top: 1px;
   max-height: 90px;
 }
-
-

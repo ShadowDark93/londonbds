@@ -31,6 +31,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getScreenWidth = window.innerWidth;
+    this.closeMenu();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -38,14 +39,10 @@ export class NavbarComponent implements OnInit {
     this.getScreenWidth = window.innerWidth;
     let part = this.el.nativeElement.querySelector('#navbar');
     if (this.getScreenWidth > 991) {
-      console.log(part);
-      this.renderer.addClass(part, 'mobile-nav-toggle');
-      this.renderer.removeClass(part, 'navbar');
+      this.renderer.addClass(part, 'navbar');
       this.renderer.removeClass(part, 'navbar-mobile');
-    } else if (this.getScreenWidth > 900 && this.getScreenWidth < 1366) {
-      this.renderer.addClass(part, 'navbar-mobile');
-      this.renderer.removeClass(part, 'navbar');
     } else {
+      !this.isMenuOpenned;
       this.renderer.addClass(part, 'navbar-mobile');
       this.renderer.removeClass(part, 'navbar');
     }
@@ -53,16 +50,20 @@ export class NavbarComponent implements OnInit {
 
   switchEs() {
     this.translate.use('es');
-    this.menuMobile();
+    this.closeMenu();
   }
 
   switchEn() {
     this.translate.use('en');
-    this.menuMobile();
+    this.closeMenu();
   }
 
-  menuMobile() {
-    this.isMenuOpenned = !this.isMenuOpenned;
+  openMobile() {
+    this.isMenuOpenned=true;
+  }
+
+  closeMenu() {
+    this.isMenuOpenned=false;
   }
 
 

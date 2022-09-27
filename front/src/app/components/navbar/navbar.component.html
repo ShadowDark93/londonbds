@@ -8,46 +8,41 @@
     </div>
 
     <!-- <nav id="navbar" class="navbar"> -->
-    <nav id="navbar" >
-      <!-- <nav id="navbar" [ngClass]="getScreenWidth > 990 ? 'navbar': 'navbar-mobile'" [ngClass]="{ navbar: !isMenuOpenned, 'navbar-mobile': isMenuOpenned }"> -->
+
+      <nav id="navbar" [ngClass]="getScreenWidth > 990 ? 'navbar': 'navbar-mobile'" [ngClass]="{ navbar: !isMenuOpenned, 'navbar-mobile': isMenuOpenned }">
 
       <ul>
         <li>
-          <a (click)="menuMobile()" class="nav-link scrollto" href="/#hero">{{
-            "navbar.inicio" | translate
-            }}</a>
+          <a class="nav-link scrollto" (click)="closeMenu()" href="/#hero">{{"navbar.inicio" | translate}}</a>
         </li>
 
         <li>
-          <a (click)="menuMobile()" class="nav-link scrollto" href="/#about">{{
-            "navbar.nosotros" | translate
-            }}</a>
+          <a class="nav-link scrollto" (click)="closeMenu()" href="/#about">{{"navbar.nosotros" | translate}}</a>
         </li>
 
         <li>
-          <a (click)="menuMobile()" class="nav-link scrollto" href="/#portfolio">{{ "navbar.portafolio" | translate
-            }}</a>
+          <a class="nav-link scrollto" (click)="closeMenu()" href="/#portfolio">{{ "navbar.portafolio" | translate }}</a>
         </li>
 
         <li>
-          <a (click)="menuMobile()" class="nav-link scrollto" href="/#team">{{
-            "navbar.tiendas" | translate
-            }}</a>
+          <a class="nav-link scrollto" (click)="closeMenu()" href="/#team">{{ "navbar.tiendas" | translate }}</a>
         </li>
 
         <li>
-          <a (click)="menuMobile()" class="nav-link scrollto" href="/#contact">{{ "navbar.contacto" | translate }}</a>
+          <a class="nav-link scrollto" (click)="closeMenu()" href="/#contact">{{ "navbar.contacto" | translate }}</a>
         </li>
 
         <li>
-          <!-- <a (click)="switchEs()" class="nav-link scrollto"><img src="../../../assets/img/colombia.png" height="30px" width="30px" /></a> -->
+          <a (click)="switchEs()" class="nav-link scrollto"><img src="../../../assets/img/colombia.png" height="30px" width="30px" /></a>
         </li>
 
         <li>
-          <!-- <a (click)="switchEn()" class="nav-link scrollto"><img src="../../../assets/img/reino-unido.png" height="30px" width="30px"/></a> -->
+          <a (click)="switchEn()" class="nav-link scrollto"><img src="../../../assets/img/reino-unido.png" height="30px" width="30px"/></a>
         </li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle" (click)="menuMobile()"></i>
+      <i class="bi bi-list mobile-nav-toggle" (click)="openMobile()"></i>
+
     </nav>
+
   </div>
 </header>

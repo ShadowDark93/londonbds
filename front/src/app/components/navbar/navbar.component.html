@@ -7,36 +7,36 @@
       <a href="/"><img src="assets/img/logo.png" alt="" class="img-fluid" /></a>
     </div>
 
-    <!-- <nav id="navbar" class="navbar"> -->
+    <nav id="navbar"  [ngClass]="{ navbar: !isMenuOpenned, 'navbar-mobile': isMenuOpenned }">
 
-      <nav id="navbar" [ngClass]="getScreenWidth > 990 ? 'navbar': 'navbar-mobile'" [ngClass]="{ navbar: !isMenuOpenned, 'navbar-mobile': isMenuOpenned }">
+      <!-- <nav id="navbar" class="navbar" [ngClass]="getScreenWidth > 990 ? 'navbar': 'navbar-mobile'" [ngClass]="{ navbar: !isMenuOpenned, 'navbar-mobile': isMenuOpenned }"> -->
 
       <ul>
         <li>
-          <a class="nav-link scrollto" (click)="closeMenu()" href="/#hero">{{"navbar.inicio" | translate}}</a>
+          <a class="nav-link scrollto" (click)="closeMenuMobile()" href="/#hero">{{"navbar.inicio" | translate}}</a>
         </li>
 
         <li>
-          <a class="nav-link scrollto" (click)="closeMenu()" href="/#about">{{"navbar.nosotros" | translate}}</a>
+          <a class="nav-link scrollto" (click)="closeMenuMobile()" href="/#about">{{"navbar.nosotros" | translate}}</a>
         </li>
 
         <li>
-          <a class="nav-link scrollto" (click)="closeMenu()" href="/#portfolio">{{ "navbar.portafolio" | translate }}</a>
+          <a class="nav-link scrollto" (click)="closeMenuMobile()" href="/#portfolio">{{ "navbar.portafolio" | translate }}</a>
         </li>
 
         <li>
-          <a class="nav-link scrollto" (click)="closeMenu()" href="/#team">{{ "navbar.tiendas" | translate }}</a>
+          <a class="nav-link scrollto" (click)="closeMenuMobile()" href="/#team">{{ "navbar.tiendas" | translate }}</a>
         </li>
 
         <li>
-          <a class="nav-link scrollto" (click)="closeMenu()" href="/#contact">{{ "navbar.contacto" | translate }}</a>
+          <a class="nav-link scrollto" (click)="closeMenuMobile()" href="/#contact">{{ "navbar.contacto" | translate }}</a>
         </li>
 
-        <li>
+        <li *ngIf="!idioma">
           <a (click)="switchEs()" class="nav-link scrollto"><img src="../../../assets/img/colombia.png" height="30px" width="30px" /></a>
         </li>
 
-        <li>
+        <li *ngIf="idioma">
           <a (click)="switchEn()" class="nav-link scrollto"><img src="../../../assets/img/reino-unido.png" height="30px" width="30px"/></a>
         </li>
       </ul>

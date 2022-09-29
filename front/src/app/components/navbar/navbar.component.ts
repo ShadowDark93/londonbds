@@ -21,9 +21,14 @@ export class NavbarComponent implements OnInit {
 
   public getScreenWidth: any;
 
-  constructor(public translate: TranslateService,
+  idioma: boolean =false;
+
+  constructor(
+    public translate: TranslateService
+    /* ,
     private el: ElementRef,
-    private renderer: Renderer2) {
+    private renderer: Renderer2 */
+  ) {
     translate.addLangs(['en', 'es']);
     translate.setDefaultLang('en');
     translate.use('en');
@@ -31,10 +36,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getScreenWidth = window.innerWidth;
-    this.closeMenu();
+    this.closeMenuMobile();
   }
 
-  @HostListener('window:resize', ['$event'])
+ /*  @HostListener('window:resize', ['$event'])
   onWindowResize() {
     this.getScreenWidth = window.innerWidth;
     let part = this.el.nativeElement.querySelector('#navbar');
@@ -46,23 +51,27 @@ export class NavbarComponent implements OnInit {
       this.renderer.addClass(part, 'navbar-mobile');
       this.renderer.removeClass(part, 'navbar');
     }
-  }
+  } */
 
   switchEs() {
     this.translate.use('es');
-    this.closeMenu();
+    this.closeMenuMobile();
+    this.idioma = false;
+    this.idioma = !this.idioma;
   }
 
   switchEn() {
     this.translate.use('en');
-    this.closeMenu();
+    this.closeMenuMobile();
+    this.idioma = true;
+    this.idioma = !this.idioma;
   }
 
   openMobile() {
     this.isMenuOpenned=true;
   }
 
-  closeMenu() {
+  closeMenuMobile() {
     this.isMenuOpenned=false;
   }
 
